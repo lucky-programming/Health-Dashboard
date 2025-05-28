@@ -1,0 +1,161 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 0 2rem;
+  height: 72px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  gap: 1rem;
+ 
+}
+
+.header-logo-title {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2a3a4b;
+  white-space: nowrap; /* prevent wrapping */
+}
+
+.header-search-bar {
+  display: flex;
+  align-items: center;
+  background: #f0f4f8;
+  border-radius: 8px;
+  padding: 0 1rem;
+  height: 38px;
+  min-width: 220px;
+  flex-grow: 1; /* grow to fill available space */
+  max-width: 500px;
+}
+
+.header-input {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.header-notification {
+  width: 24px;
+  height: 24px;
+  background: #eaf1fb;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(14, 193, 136);
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.header-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.header-name {
+  font-weight: 500;
+  color: #2a3a4b;
+}
+
+.header-add-btn {
+
+  background: #1b193f;
+  color: #fff;
+  border: 2px solid #1b193f;
+  border-radius: 15%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+   display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-shrink: 0; 
+}
+.plus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .header {
+    justify-content: center;
+    padding: 0 1rem;
+    height: auto;
+  }
+
+  .header-logo-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .header-search-bar {
+    min-width: 100%;
+    max-width: none;
+    order: 3;
+  }
+
+  .header-actions {
+    order: 2;
+    gap: 1rem;
+  }
+
+  .header-name {
+    display: none; /* hide name to save space */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo-title {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header-actions {
+    justify-content: center;
+    width: 100%;
+    order: 2;
+    gap: 1rem;
+  }
+
+  .header-add-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}

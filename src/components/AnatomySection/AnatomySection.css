@@ -1,0 +1,238 @@
+.anatomy-health-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.title-health {
+  color: green;
+}
+
+.title-care {
+  color: navy;
+}
+
+/* Anatomy Section */
+.anatomySection {
+  display: flex;
+  flex-direction: row;
+  flex: 2 1 60%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Image wrapper */
+.anatomy-img-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  width: 100%;
+}
+
+.bodyImg {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Floating indicators */
+.floating-indicator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-color: #f9fafa;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  border-left: 4px solid #3DC47E;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2a3a4b;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.floating-indicator.heart {
+  top: 24%;
+  left: 46%;
+}
+
+.floating-indicator.leg {
+  top: 72%;
+  left: 44%;
+}
+
+/* Health Cards */
+.health-cards-container {
+  flex: 1 1 35%;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  height: 480px;
+  box-sizing: border-box;
+}
+
+.health-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 5px solid transparent;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  background: #fff;
+  transition: transform 0.15s ease;
+  flex: 1;
+  min-height: 60px;
+}
+
+.health-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.health-icon {
+  font-size: 1.8rem;
+  margin-right: 1.2rem;
+}
+
+.health-info {
+  flex: 1;
+}
+
+.health-label {
+  font-weight: 600;
+  color: #2a3a4b;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.health-date {
+  font-size: 0.9rem;
+  color: #7a8ca3;
+}
+
+.health-status-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-left: 0.8rem;
+  flex-shrink: 0;
+}
+
+/* ActivityFeed wrapper */
+.activity-feed-container {
+  flex: 1 1 100%;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Tablet & small laptop responsiveness */
+@media (max-width: 1024px) {
+  .anatomy-health-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .anatomySection,
+  .health-cards-container {
+    max-width: 100%;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .anatomy-img-wrapper {
+    height: auto;
+  }
+
+  .bodyImg {
+    height: auto;
+    max-height: 380px;
+  }
+
+  .floating-indicator.heart {
+    top: 25%;
+    left: 44%;
+  }
+
+  .floating-indicator.leg {
+    top: 72%;
+    left: 48%;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .anatomy-health-container {
+    padding: 0.75rem;
+    gap: 1.5rem;
+  }
+
+  .anatomySection,
+  .health-cards-container {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .bodyImg {
+    height: 300px;
+  }
+
+  .floating-indicator {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .floating-indicator.heart {
+    top: 27%;
+    left: 42%;
+  }
+
+  .floating-indicator.leg {
+    top: 72%;
+    left: 50%;
+  }
+
+  .health-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .health-label {
+    font-size: 0.9rem;
+  }
+
+  .health-date {
+    font-size: 0.8rem;
+  }
+}

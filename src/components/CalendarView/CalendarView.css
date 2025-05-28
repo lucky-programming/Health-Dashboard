@@ -1,0 +1,271 @@
+/* Main container */
+.calendar-container {
+  background: #f8fbff;
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 960px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  color: #2e3a59;
+  gap: 0.5rem;
+}
+
+.calendar-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1b1f4a;
+}
+
+.calendar-nav span {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 6px;
+  color: #6b728e;
+  transition: color 0.3s ease;
+}
+
+.calendar-nav span:hover {
+  color: #3741c8;
+}
+
+/* Grid layout */
+.calendar-grid {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Days header */
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.calendar-cell {
+  background: #e2e8f0;
+  border-radius: 12px;
+  padding: 0.6rem 0;
+  font-weight: 500;
+  color: #3741c8;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.day-name {
+  font-size: 0.8rem;
+  color: #8890a4;
+}
+
+.day-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.Times {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: navy;
+  gap: 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Appointments */
+.calendar-appointments {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.5rem;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.appointment-tag {
+  flex: 1 1 calc(33.333% - 0.5rem);
+  background-color: #e0e4ff;
+  border-radius: 15px;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2f3d6e;
+  gap: 0.3rem;
+  box-shadow: 0 6px 12px rgba(55, 65, 120, 0.1);
+  transition: transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.dr {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+}
+
+.appointment-tag:hover {
+  transform: translateY(-2px);
+}
+
+.appointment-tag.dark {
+  background-color: #3741c8;
+  color: #ffffff;
+}
+
+.appointment-tag.light {
+  background-color: #f0f2ff;
+  color: #2f3d6e;
+}
+
+.appointment-tag .time,
+.appointment-tag .doctor {
+  font-size: 0.75rem;
+  color: inherit;
+}
+
+/* Upcoming Schedule Section */
+.upcoming-schedule {
+  margin-top: 2.5rem;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.schedule-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.upcoming-schedule h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #3741c8;
+}
+
+.schedule-day {
+  margin-bottom: 1.2rem;
+}
+
+.schedule-day .day {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4e4e4e;
+  margin-bottom: 0.4rem;
+}
+
+.schedule-pill {
+  width: 100%;
+  max-width: 100%;
+  height: 80px;
+  background-color: #e8eafd;
+  padding: 0.7rem 1rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2e3d6e;
+  box-shadow: 0 2px 6px rgba(55, 65, 120, 0.1);
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.st {
+  width: 100%;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.schedule-pill:hover {
+  background-color: #dce0ff;
+}
+
+.schedule-pill .icon {
+  margin-left: 0.6rem;
+  font-size: 1rem;
+}
+
+.schedule-pill .time {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #6d7485;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .appointment-tag {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .appointment-tag {
+    flex: 1 1 100%;
+    font-size: 0.75rem;
+  }
+
+  .schedule-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-grid,
+  .calendar-days,
+  .calendar-appointments {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calendar-container {
+    padding: 1rem;
+  }
+
+  .calendar-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .appointment-tag {
+    padding: 0.6rem 0.9rem;
+  }
+
+  .schedule-pill {
+    font-size: 0.8rem;
+  }
+}

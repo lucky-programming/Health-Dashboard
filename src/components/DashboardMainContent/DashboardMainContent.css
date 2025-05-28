@@ -1,0 +1,37 @@
+/* Core card style */
+.dashboard-main-content > .row1 > *,
+.dashboard-main-content > .row2 > * {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin: 0.5rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Layout for first and second rows */
+.row1,
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+/* Adjust layout on smaller screens */
+@media (max-width: 992px) {
+  .row1,
+  .row2 {
+    flex-direction: column;
+  }
+
+  .dashboard-main-content > .row1 > *,
+  .dashboard-main-content > .row2 > * {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
